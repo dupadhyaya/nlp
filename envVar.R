@@ -2,7 +2,7 @@
 
 path1 <- Sys.getenv('PATH')
 
-Sys.setenv(PATH = paste("C:\\rtools43\\bin", Sys.getenv("PATH"), sep=";"))
+#Sys.setenv(PATH = paste("C:\\rtools43\\bin", Sys.getenv("PATH"), sep=";"))
 
 
 Sys.which('make')
