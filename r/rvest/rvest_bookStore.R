@@ -7,3 +7,4 @@ page <- read_html(url1)
 page
 
 page %>% html_elements(xpath ='bookstore')
+page %>% html_elements('bookstore') %>% html_text()
