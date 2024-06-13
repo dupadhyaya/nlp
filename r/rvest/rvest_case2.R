@@ -2,7 +2,6 @@
 
 pacman::p_load(rvest, tidyverse)
 
-
 # rvest::read_html()
 # purrr::map()
 # rvest::html_nodes()
@@ -18,7 +17,7 @@ html1 %>% html_node('h1') %>% html_text2()
 html1 %>% html_nodes('p')
 html1 %>% html_nodes('p') %>% html_attr('id', 'dup1')
 
-html %>% html_nodes('.dup1')
+html1 %>% html_nodes('.dup1')
 
 urlGD = 'https://docs.google.com/document/d/1N7w-FG7if82ivdlG7oSxq2Sxag6zAgUvnWO8kpcpPuI/edit#heading=h.gy8wuo2rw6h'
 url3 ='https://docs.google.com/document/d/e/2PACX-1vSUcWrXB3Dwy7WZ29_LIL5JbRTPRyvBHMfmb6oMYdKx5OebaHVu7aM7ESEJR6KVUT7D4Z-V3la30Z-r/pub'
@@ -37,8 +36,10 @@ html2 %>% html_nodes('div') %>% html_attr('class')
 html2 %>% html_nodes('div') %>% html_attr(class='c18')
 html2 %>% html_nodes(xpath ="//div[@class='c18 doc-content']")
 html2 %>% html_nodes(xpath ="//*[@id='contents']/div/p[3]")%>% html_text()
+
 xp2 ='//*[@id="contents"]/div/table/tbody/tr[2]/td[4]/p/span'
 xp2 = '//div/table/tbody/tr[2]/td[4]'
+
 html2 %>% html_nodes(xpath=xp2) %>% html_text()
 
 html_elements(html2, css='title')
@@ -88,3 +89,4 @@ html3 %>% html_nodes(css='[target="_blank"]')
 
 ?html_nodes
 #https://www.w3schools.com/cssref/css_selectors.php
+
