@@ -3,11 +3,16 @@
 pacman::p_load(RSelenium, tidyverse, wdman, netstat)
 
 binman::list_versions('chromedriver')
-rsDriver <- rsDriver(browser='chrome', chromever = '123.0.6312.105', verbose=F, port =free_port())
+rsDriver <- rsDriver(browser='chrome', chromever = '129.0.6668.89', verbose=F, port =free_port())
+remDr <- rsDriver$client()
+
+remDrCH <- rsDriverCH[['client']]
+remDrCH$open()
 
 remDr <- rsDriver$client
 remDr$open()
 url1 ='https://statisticsglobe.com'
+rsDriver()$open(url1)
 remDr$navigate(url1)
 remDr$getTitle()
 remDr$getCurrentUrl()

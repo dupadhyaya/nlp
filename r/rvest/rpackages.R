@@ -11,3 +11,7 @@ dfr %>% mutate(Title = stringr::str_trim(Title))  %>%  write_sheet(. , ss=gslib,
 
 ?write_sheet()
 ?read_this
+
+nirf1 ='https://www.nirfindia.org/Rankings/2024/OverallRanking.html'
+nirfDF <- nirf1 %>% read_html() %>% html_table() %>% as.data.frame()
+head(nirfDF)

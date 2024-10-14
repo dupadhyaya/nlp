@@ -18,6 +18,7 @@ binman::list_versions('firefox')
 #latest-
 remote_driver <- rsDriver(browser='chrome', version = '123.0.6312.106', port = free_port())
 rd <- rsDriver(browser = 'chrome', port=free_port(), verbose=T)
+
 rd <- rsDriver(browser='firefox',port=free_port())
 
 remdr <- remoteDriver(remoteServerAdd='localhost', browser='firefox', port=free_port())
