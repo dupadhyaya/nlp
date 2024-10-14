@@ -15,4 +15,4 @@ eCaps2 <- list(chromeOptions = list( args = c('--window-size=1280,800')
 #rD <- rsDriver(browser=c("chrome"), verbose = F, chromever="123.0.6312.105", port=4447L, extraCapabilities = eCaps2) 
 
 free_port()
-rD <- rsDriver(browser="chrome", verbose = F, chromever="123.0.6312.105", port=14415L)
+rD <- rsDriver(browser="chrome", verbose = F, chromever="123.0.6312.105", port=14416L)
