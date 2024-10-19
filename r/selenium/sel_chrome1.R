@@ -6,11 +6,19 @@ pacman::p_load(RSelenium, wdman, tidyverse, netstat, binman)
 #loc of chrome driver
 binman::list_versions(appname='chromedriver')
 wdman:::chrome_check(verbose=T)
-
+wdman::chrome()
+selenium()
+netstat::free_port()
+wdman::selenium(verbose=T, port = netstat::free_port())
+rD <- rsDriver(browser = "chrome", check= F)
+appdir <- binman::app_dir("chromedriver", check = TRUE)
+appdir
+list.dirs(appdir)
 #using wdman-------
 #https://docs.ropensci.org/wdman/articles/basics.html
-cDrv <- wdman::chrome(retcommand = T, version='129.0.6668.89', verbose=F, check=T)
+cDrv <- wdman::chrome(retcommand = T, verbose=F, check=T)
 class(cDrv)
+cDrv$command
 
 wdman:::chrome_check(verbose=T)
 binman::list_versions(appname='chromedriver')['mac64_m1']
