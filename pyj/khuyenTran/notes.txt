@@ -1,0 +1,11 @@
+
+To automate the process, you can configure nbqa to run automatically every time you commit a Jupyter Notebook using pre-commit. Here’s an example pre-commit-config.yaml file:
+
+# pre-commit-config.yaml
+repos:
+- repo: https://github.com/nbQA-dev/nbQA
+  rev: 0.10.0
+  hooks:
+    - id: nbqa-flake8
+    - id: nbqa-isort
+    - id: nbqa-black
