@@ -1,0 +1,4 @@
+#Development Settings
+DOMAIN="example.org"
+USERNAME="py"
+PASSWORD="anaconda"
